@@ -49,6 +49,24 @@ From now on, **every time you change a file on GitHub, Cloudflare updates the si
 
 ---
 
+## Part 2 (alternative): Host on GitHub Pages
+
+Use this instead of Cloudflare if you prefer. It's free for **public** repositories.
+
+1. In your repository, click **Add file → Create new file**.
+2. Type the file name `.nojekyll` (with the dot at the start). Leave the content empty and click **Commit changes**. This tells GitHub to serve the files as they are.
+3. Go to **Settings** (top of the repository) → **Pages** (left menu).
+4. Under **Build and deployment**:
+   - Source: **Deploy from a branch**
+   - Branch: **main**, folder: **/ (root)** → **Save**
+5. Wait 1–2 minutes and refresh the page. A box appears saying **"Your site is live at https://YOUR-USERNAME.github.io/REPOSITORY-NAME/"**. Open it.
+
+Installing on phones works exactly as described above. The Cloudflare-only files (`_headers`, `_routes.json`, `functions/`) are simply ignored by GitHub Pages.
+
+**Sign-in on GitHub Pages:** Google sign-in works in the browser on computers and Android. When you do Part 3, the domain to authorise in step 3b is `YOUR-USERNAME.github.io`, and you can **skip step 3e**. On iPhone, sign-in from the Home Screen app may fail on GitHub Pages because the sign-in helper can't run there. Signing in from Safari itself works. That limitation goes away on Cloudflare or Vercel.
+
+---
+
 ## Part 3 (optional): Google sign-in and cloud sync
 
 Without this, the app works fully. Data just stays on each device, and people can move it with **Backup / Restore** in Settings.

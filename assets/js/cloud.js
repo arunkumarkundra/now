@@ -20,13 +20,33 @@ const setStatus = (s, err = "") => { status = s; lastError = err; emit(); };
 
 const clean = (o) => JSON.parse(JSON.stringify(o)); // Firestore rejects undefined
 
-async function init() {
-  if (auth) return;
+let initPromise = null;
+let sameDomain = false; // true when this website forwards /__/auth/ to Firebase (Cloudflare function, Vercel rewrite)
+
+function init() {
+  if (auth) return Promise.resolve();
+  if (!initPromise) initPromise = doInit().catch((e) => { initPromise = null; throw e; });
+  return initPromise;
+}
+
+/** Does this website have the sign-in helper (Cloudflare function / Vercel rewrite)? GitHub Pages doesn't. */
+async function hasSignInHelper() {
+  try {
+    const r = await fetch("/__/auth/handler", { cache: "no-store" });
+    if (!r.ok) return false;
+    const t = await r.text();
+    return !t.includes('id="view"'); // not just our own app page served as a fallback
+  } catch { return false; }
+}
+
+async function doInit() {
   if (!FIREBASE_CONFIG) throw new Error("Sign-in isn't set up yet.");
-  fb = await import("../vendor/firebase.js");
-  const cfg = { ...FIREBASE_CONFIG };
   const local = /^(localhost|127\.|192\.168\.)/.test(location.hostname);
-  if (SAME_DOMAIN_SIGN_IN && !local) cfg.authDomain = location.host;
+  const [mod, helper] = await Promise.all([import("../vendor/firebase.js"), SAME_DOMAIN_SIGN_IN && !local ? hasSignInHelper() : false]);
+  fb = mod;
+  sameDomain = helper;
+  const cfg = { ...FIREBASE_CONFIG };
+  if (sameDomain) cfg.authDomain = location.host;
   app = fb.initializeApp(cfg);
   auth = fb.getAuth(app);
   db = fb.getFirestore(app);
@@ -75,7 +95,8 @@ export async function signIn(which) {
       provider = new fb.GoogleAuthProvider();
       provider.setCustomParameters({ prompt: "select_account" });
     }
-    if (!ready || isStandaloneIOS()) return await fb.signInWithRedirect(auth, provider);
+    // Redirect sign-in is only reliable on iPhone when the helper runs on this same website.
+    if (!ready || (isStandaloneIOS() && sameDomain)) return await fb.signInWithRedirect(auth, provider);
     try {
       await fb.signInWithPopup(auth, provider);
     } catch (e) {

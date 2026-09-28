@@ -1,5 +1,5 @@
 // Offline support. Bump VERSION whenever you change any file, so phones pick up the update.
-const VERSION = "observer-v1.0.0";
+const VERSION = "observer-v1.0.1";
 const SHELL = [
   "./",
   "index.html",

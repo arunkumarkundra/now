@@ -26,6 +26,8 @@ export const SIGN_IN_WITH = {
   apple: false,
 };
 
-// 3) Leave true. It makes sign-in work reliably on iPhone "home screen" apps
-//    by routing the sign-in page through your own website address.
+// 3) Leave true. Where the website has the sign-in helper (Cloudflare Pages, or Vercel
+//    with vercel.json), sign-in runs through your own address, which iPhone Home Screen
+//    apps need. Where it doesn't (e.g. GitHub Pages), the app detects that and falls back
+//    to Firebase's standard sign-in window automatically.
 export const SAME_DOMAIN_SIGN_IN = true;
