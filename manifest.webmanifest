@@ -1,8 +1,8 @@
 {
-  "name": "Observer — an attention experiment",
+  "name": "Observer — a quiet attention practice",
   "short_name": "Observer",
-  "description": "A 14-day attention experiment: stabilize, release, inquire. Rate what happens and track it over time.",
-  "start_url": "./#/today",
+  "description": "A quiet, guided attention practice in three parts: breath, letting go, and looking for the observer.",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

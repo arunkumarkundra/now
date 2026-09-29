@@ -1,107 +1,107 @@
 # Narration script for Observer. Each cue is a list of sentences (str) and pauses (float seconds).
-# Plain, secular, unhurried. Written to be heard, not read.
+# Plain, secular, unhurried. Written to be heard, not read. Short phrases, long pauses.
 
 CUES = {
-  # ---------- GUIDED ----------
+  # ---------- GUIDED (full instructions) ----------
   "g_intro": [
-    "Welcome.", 1.2,
-    "Settle into a comfortable position, somewhere you won't be disturbed.", 1.0,
-    "Let the room be dim, and quiet.", 1.6,
-    "For the next while, there is nothing to achieve,", 0.3, "and nothing to believe.", 1.2,
-    "You're simply going to look,", 0.3, "and see what happens.", 2.0,
+    "Welcome.", 2.0,
+    "Take a moment to settle in.", 2.5,
+    "Sit comfortably,", 0.5, "with your back upright,", 0.5, "but not stiff.", 2.0,
+    "Let your hands rest wherever they're comfortable.", 2.5,
+    "Let your shoulders drop.", 2.0,
+    "Soften your jaw,", 0.6, "and the muscles around your eyes.", 3.0,
+    "Take a slow breath in,", 3.0, "and let it go.", 4.0,
+    "Once more.", 1.0, "Breathing in,", 3.0, "and out.", 4.5,
+    "For the next while,", 0.6, "there is nothing to achieve.", 2.0,
+    "You're simply going to look,", 0.6, "and see what happens.", 3.0,
+    "When you're ready,", 0.8, "let your eyes close.", 3.0,
   ],
   "g_p1_start": [
-    "Close your eyes.", 1.6,
-    "Bring your attention to the physical sensation of breathing.", 0.8,
-    "Wherever it's clearest.", 0.4, "Perhaps around the nose.", 1.8,
-    "Don't change the breath.", 0.6, "Just feel it, as it is.", 2.5,
-    "Your only job is this.", 1.0,
-    "Notice when attention has wandered,", 0.5, "and return.", 2.5,
-    "Thoughts will come.", 0.6, "You don't need to fight them,", 0.3, "or push them away.",
+    "Let your breathing find its own rhythm.", 3.0,
+    "Bring your attention to the feeling of the breath,", 0.6, "wherever it's clearest.", 1.2,
+    "Perhaps at the nose.", 3.0,
+    "There's no need to change it.", 1.2, "Just feel it,", 0.6, "as it is.", 4.0,
+    "Your only job is this.", 2.0,
+    "Notice when attention has wandered,", 1.0, "and gently return.", 4.0,
+    "Thoughts will come.", 1.5, "You don't need to fight them.", 1.2,
+    "Just come back to the breath.",
   ],
   "g_p1_mid": [
-    "If you've drifted,", 0.4, "that moment of noticing is the practice itself.", 1.2,
-    "Gently return to the breath.",
+    "If you've drifted,", 1.0, "noticing that is the practice itself.", 2.5,
+    "Gently,", 0.8, "come back to the breath.",
   ],
   "g_p1_late": [
-    "Success isn't having no thoughts.", 1.0,
-    "It's how quickly you notice.", 1.2,
-    "Notice,", 0.4, "and return.",
+    "Success isn't having no thoughts.", 2.0,
+    "It's noticing,", 1.0, "and returning.",
   ],
   "g_p2_start": [
-    "Now, let go of the breath.", 1.6,
-    "Stop concentrating on anything in particular.", 1.2,
-    "Let everything appear on its own.", 0.8,
-    "Sounds.", 0.6, "Sensations.", 0.6, "Thoughts.", 0.6, "Images.", 0.6, "Feelings.", 2.5,
-    "And one unusual instruction.", 1.2,
-    "Don't take up the position of an observer.", 1.2,
-    "There's no need to think,", 0.3, "I am watching my thoughts.", 1.4,
-    "Simply notice that thoughts,", 0.3, "sensations,", 0.3, "and awareness,", 0.3, "are occurring.",
+    "Now,", 1.0, "let go of the breath.", 3.0,
+    "Stop focusing on anything in particular.", 2.5,
+    "Let everything appear on its own.", 2.0,
+    "Sounds.", 1.5, "Sensations.", 1.5, "Thoughts.", 1.5, "Feelings.", 4.0,
+    "And there's no need to be the one who is watching.", 2.5,
+    "Simply notice that thoughts,", 0.8, "sensations,", 0.8, "and awareness,", 1.0, "are happening,", 1.0, "on their own.",
   ],
   "g_p2_mid": [
-    "If a thought says,", 0.3, "I'm doing this badly,", 0.6, "that's just another event.", 1.4,
-    "If a sensation says,", 0.3, "my leg hurts,", 0.6, "another event.", 1.6,
-    "Nothing to suppress.", 0.8, "Nothing to pursue.",
+    "If a thought says,", 0.6, "I'm doing this badly,", 1.2, "that's just another event.", 2.5,
+    "Nothing to push away.", 1.5, "Nothing to follow.",
   ],
   "g_p2_late": [
-    "Whatever appears,", 0.4, "let it appear.", 1.0,
-    "Whatever leaves,", 0.4, "let it leave.",
+    "Whatever appears,", 1.0, "let it appear.", 2.0,
+    "Whatever leaves,", 1.0, "let it leave.",
   ],
   "g_p3_start": [
-    "Now, ask one question.", 2.0,
-    "Where,", 0.5, "exactly,", 0.5, "is the observer?", 3.5,
-    "Don't answer with an idea.", 0.8,
-    "Not the brain.", 0.6, "Not behind the eyes.", 1.4,
-    "Actually look.", 2.5,
-    "If you seem to find a location,", 0.4, "examine it closely.", 1.4,
-    "Is the observer there?", 1.2,
-    "Or only a sensation,", 0.4, "an image,", 0.4, "or a thought,", 0.4, "about an observer?",
+    "Now,", 1.0, "gently ask one question.", 3.5,
+    "Where,", 1.0, "exactly,", 1.0, "is the observer?", 6.0,
+    "Don't answer with an idea.", 2.0,
+    "Actually look.", 5.0,
+    "If you seem to find a place,", 1.0, "look at it closely.", 2.5,
+    "Is someone there?", 2.0,
+    "Or only a sensation,", 1.0, "an image,", 1.0, "or a thought?",
   ],
   "g_p3_drop": [
-    "Now let the question go.", 1.6,
-    "For the remaining time,", 0.4, "keep looking,", 0.6, "without building an answer.",
+    "Now,", 0.8, "let the question go.", 3.0,
+    "For the remaining time,", 1.0, "keep looking,", 1.2, "without building an answer.",
   ],
   "g_p3_late": [
-    "Nothing needs to happen.", 1.2,
-    "Whatever occurs,", 0.4, "or doesn't,", 0.6, "is simply a result.",
+    "Nothing needs to happen.", 2.5,
+    "Just rest,", 1.0, "and look.",
   ],
   "g_end": [
-    "The session is complete.", 1.8,
-    "Stay still for a moment.", 1.2,
-    "Let the experience be what it was,", 0.4, "without deciding what it meant.", 2.2,
-    "When you're ready,", 0.4, "open your eyes,", 0.6,
-    "and record your ratings straight away,", 0.4, "before you think about them.",
+    "The session is complete.", 3.5,
+    "There's no need to move yet.", 2.5,
+    "Let the experience be what it was.", 4.0,
+    "Slowly,", 1.0, "let a little movement come back,", 0.8, "into your fingers,", 1.0, "and your hands.", 4.0,
+    "And when you're ready,", 1.0, "gently open your eyes.",
   ],
 
-  # ---------- MINIMAL ----------
+  # ---------- MINIMAL (key instructions only) ----------
+  "m_intro": [
+    "Settle in,", 1.0, "and sit comfortably.", 2.5,
+    "Take one slow breath in,", 3.0, "and let it go.", 3.5,
+    "When you're ready,", 0.8, "close your eyes.",
+  ],
   "m_p1_start": [
-    "Close your eyes.", 1.0, "Attention on the breath.", 1.2,
-    "Notice when it wanders,", 0.4, "and return.",
+    "Attention on the breath.", 2.5,
+    "Notice when it wanders,", 1.0, "and gently return.",
   ],
   "m_p2_start": [
-    "Release the anchor.", 1.2, "Let everything appear.", 1.2,
-    "No need to be the observer.",
+    "Let go of the breath.", 2.5,
+    "Let everything appear on its own.",
   ],
   "m_p3_start": [
-    "Where,", 0.4, "exactly,", 0.4, "is the observer?", 1.6,
-    "Look.", 0.6, "Don't answer.",
+    "Where,", 1.0, "exactly,", 1.0, "is the observer?", 3.5,
+    "Look.", 1.2, "Don't answer.",
   ],
   "m_p3_drop": [
-    "Let the question go.", 1.0, "Keep looking.",
+    "Let the question go.", 2.0, "Keep looking.",
   ],
   "m_end": [
-    "Session complete.", 1.2, "Record your ratings,", 0.3, "before interpreting.",
-  ],
-
-  # ---------- SHORT UTTERANCES (preview) ----------
-  "preview": [
-    "This is how I'll sound during your sessions.", 0.8, "Calm,", 0.3, "and unhurried.",
+    "The session is complete.", 3.0,
+    "Open your eyes,", 0.8, "when you're ready.",
   ],
 }
 
-VOICES = {
-  # id: (kokoro voice, speed, display name, description)
-  "warm":  ("af_heart", 0.84, "Warm", "Soft, warm female voice"),
-  "clear": ("bf_emma", 0.86, "Clear", "Calm British female voice"),
-  "low":   ("am_michael", 0.86, "Low", "Low, steady male voice"),
-}
+# The one voice used by the app (Kokoro-82M). af_heart is Kokoro's most natural voice;
+# slowed down it is warm and unhurried without sounding sleepy.
+VOICE = ("af_heart", 0.8)
